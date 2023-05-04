@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class menuGUI extends JFrame{
 
@@ -12,5 +14,11 @@ public class menuGUI extends JFrame{
         setSize(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+        aggiungereGiocatoreButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AggiungiGiocatoreGUI ag1 = new AggiungiGiocatoreGUI();
+            }
+        });
     }
 }
