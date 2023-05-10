@@ -20,5 +20,11 @@ public class menuGUI extends JFrame{
                 AggiungiGiocatoreGUI ag1 = new AggiungiGiocatoreGUI();
             }
         });
+        iniziarePartitaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                partitaGUI p1 = new partitaGUI();
+            }
+        });
     }
 }
