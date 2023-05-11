@@ -7,6 +7,12 @@ public class primaFinestraGUI extends JFrame{
     private JButton AVANTIButton;
 
     public primaFinestraGUI(){
+        try {//interfaccia di sistema
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        }
+        catch (Exception e){
+
+        }
         setContentPane(primaFinestra);
         setTitle("INIZIALE");
         setSize(800, 500);

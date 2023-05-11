@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,9 +8,10 @@ public class AggiungiGiocatoreGUI extends JFrame{
     private JLabel lblAggiungiGIocatore;
     private JButton AGGIUNGIButton;
     private JPanel Aggiungi;
+    private JButton btnbackToTheMenu;
     private String nickname;
 
-    public AggiungiGiocatoreGUI() {
+    public AggiungiGiocatoreGUI(menuGUI m1) {
         setContentPane(Aggiungi);
         setTitle("Aggiugni Giocataore");
         setSize(800, 500);
@@ -21,6 +21,13 @@ public class AggiungiGiocatoreGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 nickname = txtNickname.getText();
+            }
+        });
+        btnbackToTheMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                m1.setVisible(true);
             }
         });
     }

@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,13 +23,23 @@ public class partitaGUI  extends JFrame{
     private JLabel lblTitle;
     private JLabel lblNomeGiocatore;
     private JPanel Game;
+    private JButton btnBack;
+    private menuGUI m1;
 
-    public partitaGUI(){
+    public partitaGUI(menuGUI m1){
         setContentPane(Game);
         setTitle("menu");
         setSize(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+        this.m1=m1;
+        btnBack.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                m1.setVisible(true);
+            }
+        });
     }
 
 

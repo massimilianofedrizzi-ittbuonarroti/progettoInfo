@@ -11,24 +11,25 @@ public class impostazioniPartitaGUI extends JFrame{
     private JPanel settings;
     private JButton btnBack;
     private JButton btnAvanti;
-
-    public impostazioniPartitaGUI(){
+    private menuGUI m1;
+    public impostazioniPartitaGUI(menuGUI m1){
         setContentPane(settings);
         setTitle("menu");
         setSize(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+        this.m1 = m1;
         btnBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                menuGUI g2 = new menuGUI();
+                m1.setVisible(true);
             }
         });
         btnAvanti.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                partitaGUI p1 = new partitaGUI();
+                partitaGUI p1 = new partitaGUI(m1);
             }
         });
     }
