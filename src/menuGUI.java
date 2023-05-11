@@ -8,13 +8,15 @@ public class menuGUI extends JFrame{
     private JButton iniziarePartitaButton;
     private JButton visualizzareClassificaButton;
     private JPanel menu;
-    public menuGUI(){
+    boolean[][] sotto;
+    public menuGUI(boolean[][] sotto){
         setContentPane(menu);
         setTitle("menu");
         setSize(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         menuGUI menu = this;
+        this.sotto = sotto;
         aggiungereGiocatoreButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,7 +27,7 @@ public class menuGUI extends JFrame{
         iniziarePartitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                impostazioniPartitaGUI imp1 = new impostazioniPartitaGUI(menu);
+                impostazioniPartitaGUI imp1 = new impostazioniPartitaGUI(menu, sotto);
                 menu.setVisible(false);
             }
         });

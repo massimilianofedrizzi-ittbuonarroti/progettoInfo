@@ -8,132 +8,132 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="c68de" class="javax.swing.JButton" binding="button1" default-binding="true">
+      <component id="c68de" class="javax.swing.JButton" binding="NEButton00">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="d437" class="javax.swing.JButton" binding="button2" default-binding="true">
+      <component id="d437" class="javax.swing.JButton" binding="NEButton01">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="cc302" class="javax.swing.JButton" binding="button3" default-binding="true">
+      <component id="cc302" class="javax.swing.JButton" binding="NEButton02">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="17daa" class="javax.swing.JButton" binding="button4" default-binding="true">
+      <component id="17daa" class="javax.swing.JButton" binding="NEButton03">
         <constraints>
           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="ecca5" class="javax.swing.JButton" binding="button5" default-binding="true">
+      <component id="ecca5" class="javax.swing.JButton" binding="NEButton10">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="cd206" class="javax.swing.JButton" binding="button6" default-binding="true">
+      <component id="cd206" class="javax.swing.JButton" binding="NEButton11">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="26e20" class="javax.swing.JButton" binding="button7" default-binding="true">
+      <component id="26e20" class="javax.swing.JButton" binding="NEButton12">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="cef9a" class="javax.swing.JButton" binding="button8" default-binding="true">
+      <component id="cef9a" class="javax.swing.JButton" binding="NEButton13">
         <constraints>
           <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="f0b8" class="javax.swing.JButton" binding="button9" default-binding="true">
+      <component id="f0b8" class="javax.swing.JButton" binding="NEButton20">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="b058" class="javax.swing.JButton" binding="button11" default-binding="true">
+      <component id="b058" class="javax.swing.JButton" binding="NEButton22">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="d0154" class="javax.swing.JButton" binding="button10" default-binding="true">
+      <component id="d0154" class="javax.swing.JButton" binding="NEButton21">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="94941" class="javax.swing.JButton" binding="button12" default-binding="true">
+      <component id="94941" class="javax.swing.JButton" binding="NEButton30">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="41a0a" class="javax.swing.JButton" binding="button13" default-binding="true">
+      <component id="41a0a" class="javax.swing.JButton" binding="NEButton31">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="24978" class="javax.swing.JButton" binding="button14" default-binding="true">
+      <component id="24978" class="javax.swing.JButton" binding="NEButton23">
         <constraints>
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="26da9" class="javax.swing.JButton" binding="button15" default-binding="true">
+      <component id="26da9" class="javax.swing.JButton" binding="NEButton32">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
-      <component id="76b2c" class="javax.swing.JButton" binding="button16" default-binding="true">
+      <component id="76b2c" class="javax.swing.JButton" binding="NEButton33">
         <constraints>
           <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="NE"/>
         </properties>
       </component>
       <component id="605ff" class="javax.swing.JLabel" binding="lblTitle">

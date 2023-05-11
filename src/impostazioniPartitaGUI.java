@@ -12,13 +12,15 @@ public class impostazioniPartitaGUI extends JFrame{
     private JButton btnBack;
     private JButton btnAvanti;
     private menuGUI m1;
-    public impostazioniPartitaGUI(menuGUI m1){
+    private boolean[][] sotto;
+    public impostazioniPartitaGUI(menuGUI m1, boolean[][] sotto){
         setContentPane(settings);
         setTitle("menu");
         setSize(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         this.m1 = m1;
+        this.sotto = sotto;
         btnBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -29,7 +31,7 @@ public class impostazioniPartitaGUI extends JFrame{
         btnAvanti.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                partitaGUI p1 = new partitaGUI(m1);
+                partitaGUI p1 = new partitaGUI(m1, sotto);
             }
         });
     }
