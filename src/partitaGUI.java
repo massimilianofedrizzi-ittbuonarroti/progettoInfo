@@ -23,8 +23,10 @@ public class partitaGUI  extends JFrame{
     private JLabel lblNomeGiocatore;
     private JPanel Game;
     private JButton btnBack;
+    private JLabel lblPunteggio;
     private menuGUI m1;
     private boolean[][] sotto;
+    private int punteggio;
 
     public partitaGUI(menuGUI m1, boolean[][] sotto){
         setContentPane(Game);
@@ -34,6 +36,7 @@ public class partitaGUI  extends JFrame{
         setVisible(true);
         this.m1=m1;
         this.sotto= sotto;
+        punteggio = 0;
         btnBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,10 +49,12 @@ public class partitaGUI  extends JFrame{
                 @Override
                 public void actionPerformed (ActionEvent e){
                     if (sotto[0][0]){
-
                         NEButton00.setText("E");
+                        partitaPersa p1 = new partitaPersa(m1, punteggio);
+                        setVisible(false);
                     }else{
                         NEButton00.setText("NO BOMBA");
+                        punteggio +=1;
                     }
 
             }
@@ -61,8 +66,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[0][1]){
 
                     NEButton01.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
                     NEButton01.setText("NO BOMBA");
+                    punteggio +=1;
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -73,8 +82,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[0][2]){
 
                     NEButton02.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
                     NEButton02.setText("NO BOMBA");
+                    punteggio +=1;
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -85,8 +98,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[0][3]){
 
                     NEButton03.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton03.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -97,8 +114,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][0]){
 
                     NEButton10.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton10.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -109,8 +130,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][1]){
 
                     NEButton11.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton11.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -121,8 +146,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][2]){
 
                     NEButton12.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton12.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -132,8 +161,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][3]){
 
                     NEButton13.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton13.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -143,9 +176,14 @@ public class partitaGUI  extends JFrame{
             public void actionPerformed (ActionEvent e){
                 if (sotto[2][0]){
 
+
                     NEButton20.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton20.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -156,8 +194,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[2][1]){
 
                     NEButton21.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton21.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -168,8 +210,12 @@ public class partitaGUI  extends JFrame{
                 if (sotto[2][2]){
 
                     NEButton22.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
                 }else{
+                    punteggio +=1;
                     NEButton22.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
                 }
 
             }
@@ -177,31 +223,75 @@ public class partitaGUI  extends JFrame{
         NEButton23.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NEButton23.setText("E");
+                if (sotto[2][3]){
+
+                    NEButton23.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
+                }else{
+                    punteggio +=1;
+                    NEButton23.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
+                }
             }
         });
         NEButton30.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NEButton30.setText("E");
+                if (sotto[3][0]){
+                    NEButton30.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
+                }else{
+                    punteggio +=1;
+                    NEButton30.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
+                }
             }
         });
         NEButton31.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NEButton31.setText("E");
+                if (sotto[3][1]){
+
+                    NEButton31.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
+                }else{
+                    punteggio +=1;
+                    NEButton31.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
+                }
             }
         });
         NEButton32.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NEButton32.setText("E");
+                if (sotto[3][2]){
+
+                    NEButton32.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
+                }else{
+                    punteggio +=1;
+                    NEButton32.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
+                }
             }
         });
         NEButton33.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NEButton33.setText("E");
+                if (sotto[3][3]){
+
+                    NEButton33.setText("E");
+                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    setVisible(false);
+                }else{
+                    punteggio +=1;
+                    NEButton33.setText("NO BOMBA");
+                    lblPunteggio.setText("PUNTEGGIO"+punteggio);
+                }
             }
         });
 
