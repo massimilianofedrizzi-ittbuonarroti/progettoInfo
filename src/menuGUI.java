@@ -12,7 +12,7 @@ public class menuGUI extends JFrame{
     public menuGUI(boolean[][] sotto){
         setContentPane(menu);
         setTitle("menu");
-        setSize(450, 300);
+        setSize(700, 500);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         menuGUI menu = this;

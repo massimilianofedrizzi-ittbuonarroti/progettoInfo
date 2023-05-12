@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-16777216"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="fee45" class="javax.swing.JLabel">
@@ -13,7 +15,9 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-16777216"/>
           <font name="Arial Black" size="48"/>
+          <foreground color="-14658369"/>
           <text value="CIAO CARISSIMO"/>
         </properties>
       </component>
@@ -22,7 +26,10 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="grazie per aver scelto il mio programma"/>
+          <font name="Source Code Pro Black"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="GRAZIE PER AVER SCELTO IL MIO PROGRAMMA"/>
         </properties>
       </component>
       <component id="226e4" class="javax.swing.JButton" binding="AVANTIButton" default-binding="true">
@@ -30,7 +37,9 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-131585"/>
           <hideActionText value="false"/>
+          <horizontalTextPosition value="0"/>
           <text value="INIZIA"/>
         </properties>
       </component>
