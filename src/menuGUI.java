@@ -9,7 +9,7 @@ public class menuGUI extends JFrame{
     private JButton visualizzareClassificaButton;
     private JPanel menu;
     boolean[][] sotto;
-    public menuGUI(boolean[][] sotto){
+    public menuGUI(boolean[][] sotto, Connessione c1){
         setContentPane(menu);
         setTitle("menu");
         setSize(700, 500);
@@ -20,14 +20,14 @@ public class menuGUI extends JFrame{
         aggiungereGiocatoreButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AggiungiGiocatoreGUI ag1 = new AggiungiGiocatoreGUI(menu);
+                AggiungiGiocatoreGUI ag1 = new AggiungiGiocatoreGUI(menu, c1);
                 menu.setVisible(false);
             }
         });
         iniziarePartitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                impostazioniPartitaGUI imp1 = new impostazioniPartitaGUI(menu, sotto);
+                impostazioniPartitaGUI imp1 = new impostazioniPartitaGUI(menu, sotto, c1);
                 menu.setVisible(false);
             }
         });

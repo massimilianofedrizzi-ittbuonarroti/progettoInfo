@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Random rand = new Random();
@@ -8,7 +9,10 @@ public class Main {
             int v = rand.nextInt(4);
             sotto[j][v] = true;
         }
-        primaFinestraGUI finestra = new primaFinestraGUI(sotto);
+        Connessione c1 = new Connessione();
+        primaFinestraGUI finestra = new primaFinestraGUI(sotto, c1);
+
+
 
     }
 }

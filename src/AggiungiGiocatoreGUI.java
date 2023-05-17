@@ -11,7 +11,7 @@ public class AggiungiGiocatoreGUI extends JFrame{
     private JButton btnbackToTheMenu;
     private String nickname;
 
-    public AggiungiGiocatoreGUI(menuGUI m1) {
+    public AggiungiGiocatoreGUI(menuGUI m1, Connessione c1) {
         setContentPane(Aggiungi);
         setTitle("Aggiugni Giocataore");
         setSize(800, 500);
@@ -21,6 +21,9 @@ public class AggiungiGiocatoreGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 nickname = txtNickname.getText();
+                c1.connetti();
+                c1.registraNickname(nickname);
+                c1.disconnetti();
             }
         });
         btnbackToTheMenu.addActionListener(new ActionListener() {

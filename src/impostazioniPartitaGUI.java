@@ -13,7 +13,7 @@ public class impostazioniPartitaGUI extends JFrame{
     private JButton btnAvanti;
     private menuGUI m1;
     private boolean[][] sotto;
-    public impostazioniPartitaGUI(menuGUI m1, boolean[][] sotto){
+    public impostazioniPartitaGUI(menuGUI m1, boolean[][] sotto, Connessione c1){
         setContentPane(settings);
         setTitle("menu");
         setSize(450, 300);

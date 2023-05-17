@@ -20,8 +20,8 @@ public class partitaPersa extends JFrame{
         btnBackMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                m1.setVisible(true);
                 setVisible(false);
+                m1.setVisible(true);
             }
         });
     }
