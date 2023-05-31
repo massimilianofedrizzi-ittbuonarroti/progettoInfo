@@ -27,6 +27,8 @@ public class AggiungiGiocatoreGUI extends JFrame{
                 c1.connetti();
                 c1.registraNickname(nickname, 0);
                 c1.disconnetti();
+                setVisible(false);
+                m1.setVisible(true);
             }
         });
         btnbackToTheMenu.addActionListener(new ActionListener() {

@@ -1,10 +1,8 @@
-import javax.swing.plaf.nimbus.State;
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,4 +51,16 @@ public class Connessione {
         }
     }
 
+    /*public Component cercaNickname() {
+        String nickname;
+        try {
+            Statement stat = connessione.createStatement();
+            String query = "SELECT `nickname` FROM `punteggi`";
+            nickname = String.valueOf(stat.execute(query));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return nickname;
+    }*/
 }

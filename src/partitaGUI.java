@@ -29,7 +29,7 @@ public class partitaGUI  extends JFrame{
     private boolean[][] sotto;
     private int punteggio;
 
-    public partitaGUI(menuGUI m1, boolean[][] sotto){
+    public partitaGUI(menuGUI m1, boolean[][] sotto, String nickname){
         setContentPane(Game);
         setTitle("menu");
         setSize(1200, 1000);
