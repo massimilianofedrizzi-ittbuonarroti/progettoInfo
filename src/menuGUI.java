@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,7 +13,9 @@ public class menuGUI extends JFrame{
     public menuGUI(boolean[][] sotto, Connessione c1){
         setContentPane(menu);
         setTitle("menu");
-        setSize(700, 500);
+        setSize(600, 400);
+        Dimension dim = getToolkit().getScreenSize();
+        setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         menuGUI menu = this;

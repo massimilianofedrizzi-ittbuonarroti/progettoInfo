@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,7 +16,9 @@ public class primaFinestraGUI extends JFrame{
         }
         setContentPane(primaFinestra);
         setTitle("INIZIALE");
-        setSize(800, 500);
+        setSize(1000, 800);
+        Dimension dim = getToolkit().getScreenSize();
+        setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         AVANTIButton.addActionListener(new ActionListener() {

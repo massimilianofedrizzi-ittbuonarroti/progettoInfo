@@ -1,46 +1,56 @@
+import javax.swing.plaf.nimbus.State;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Connessione {
     Connection connessione;
 
-    public Connessione(){
+    public Connessione() {
         this.connessione = null;
     }
 
-    public void connetti(){
-        try{
+    public void connetti() {
+        try {
             String jdbcURL = "jdbc:mysql://localhost:3306/prato_fiorito";
             String username = "root";
             String password = "";
             connessione = DriverManager.getConnection(jdbcURL, username, password);
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void disconnetti(){
-        try{
+    public void disconnetti() {
+        try {
             connessione.close();
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             Logger.getLogger(Connessione.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public void registraNickname(String nickname){
+
+    public void registraNickname(String nickName, int punteggio){
         try {
             Statement stat = connessione.createStatement();
-            String result = "INSERT INTO punteggi(nickname, punteggi) VALUES('"+nickname+"','"+0+"')";
+            String query = "INSERT INTO punteggi(Nickname, Punteggio) VALUES ('" + nickName + "','"+ punteggio+"')";
+            stat.execute(query);
         } catch (SQLException e) {
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            System.out.println(e);
         }
     }
-    public void createList(){
-
+    public void inserisciPunteggio(String nickname, int punteggio){
+        try {
+            Statement stat = connessione.createStatement();
+            String query = "UPDATE `punteggi` SET `punteggio`='"+punteggio+"' WHERE nickname ='"+nickname+"'";
+            stat.execute(query);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
+
 }

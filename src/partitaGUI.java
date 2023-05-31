@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -31,9 +32,12 @@ public class partitaGUI  extends JFrame{
     public partitaGUI(menuGUI m1, boolean[][] sotto){
         setContentPane(Game);
         setTitle("menu");
-        setSize(450, 300);
+        setSize(1200, 1000);
+        Dimension dim = getToolkit().getScreenSize();
+        setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+        Connessione c1 = new Connessione();
         this.m1=m1;
         this.sotto= sotto;
         punteggio = 0;
