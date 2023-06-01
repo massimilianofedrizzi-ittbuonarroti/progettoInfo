@@ -14,7 +14,7 @@ public class AggiungiGiocatoreGUI extends JFrame{
 
     public AggiungiGiocatoreGUI(menuGUI m1, Connessione c1) {
         setContentPane(Aggiungi);
-        setTitle("Aggiugni Giocataore");
+        setTitle("Aggiungi Giocataore");
         setSize(600, 400);
         Dimension dim = getToolkit().getScreenSize();
         setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);

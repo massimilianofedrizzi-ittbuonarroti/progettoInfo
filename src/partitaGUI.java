@@ -34,13 +34,16 @@ public class partitaGUI  extends JFrame{
         setTitle("menu");
         setSize(1200, 1000);
         Dimension dim = getToolkit().getScreenSize();
-        setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         Connessione c1 = new Connessione();
         this.m1=m1;
         this.sotto= sotto;
         punteggio = 0;
+        lblNomeGiocatore.setText(nickname);
+        pack();
+        setSize(1200, 800);
         btnBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,7 +57,7 @@ public class partitaGUI  extends JFrame{
                 public void actionPerformed (ActionEvent e){
                     if (sotto[0][0]){
                         NEButton00.setText("E");
-                        partitaPersa p1 = new partitaPersa(m1, punteggio);
+                        partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                         setVisible(false);
                     }else{
                         NEButton00.setText("NO BOMBA");
@@ -70,7 +73,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[0][1]){
 
                     NEButton01.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     NEButton01.setText("NO BOMBA");
@@ -86,7 +89,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[0][2]){
 
                     NEButton02.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     NEButton02.setText("NO BOMBA");
@@ -102,7 +105,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[0][3]){
 
                     NEButton03.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -118,7 +121,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][0]){
 
                     NEButton10.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -134,7 +137,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][1]){
 
                     NEButton11.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -150,7 +153,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][2]){
 
                     NEButton12.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -165,7 +168,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[1][3]){
 
                     NEButton13.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -182,7 +185,7 @@ public class partitaGUI  extends JFrame{
 
 
                     NEButton20.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -198,7 +201,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[2][1]){
 
                     NEButton21.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -214,7 +217,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[2][2]){
 
                     NEButton22.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -230,7 +233,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[2][3]){
 
                     NEButton23.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -244,7 +247,7 @@ public class partitaGUI  extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (sotto[3][0]){
                     NEButton30.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -259,7 +262,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[3][1]){
 
                     NEButton31.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -274,7 +277,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[3][2]){
 
                     NEButton32.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;
@@ -289,7 +292,7 @@ public class partitaGUI  extends JFrame{
                 if (sotto[3][3]){
 
                     NEButton33.setText("E");
-                    partitaPersa p1 = new partitaPersa(m1, punteggio);
+                    partitaPersa p1 = new partitaPersa(m1, punteggio, nickname);
                     setVisible(false);
                 }else{
                     punteggio +=1;

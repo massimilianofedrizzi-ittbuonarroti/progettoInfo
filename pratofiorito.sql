@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 11, 2023 alle 09:03
--- Versione del server: 10.1.37-MariaDB
--- Versione PHP: 5.6.40
+-- Creato il: Giu 01, 2023 alle 08:07
+-- Versione del server: 10.4.19-MariaDB
+-- Versione PHP: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `prato fiorito`
+-- Database: `pratofiorito`
 --
-CREATE DATABASE IF NOT EXISTS `prato fiorito` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `prato fiorito`;
+CREATE DATABASE IF NOT EXISTS `pratofiorito` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `pratofiorito`;
 
 -- --------------------------------------------------------
 

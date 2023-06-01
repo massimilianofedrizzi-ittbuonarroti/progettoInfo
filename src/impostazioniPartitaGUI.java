@@ -4,20 +4,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JList;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class impostazioniPartitaGUI extends JFrame{
     private JLabel lblTitle;
     private JLabel lblProfili;
 
     private JLabel lblDIfficoltà;
+    private String nickname;
     private JSlider slider1;
     private JPanel settings;
     private JButton btnBack;
     private JButton btnAvanti;
+    private JPanel pnlLista;
+    private JLabel lblInfo;
     private JList listNicknames;
     private menuGUI m1;
     private boolean[][] sotto;
-    public impostazioniPartitaGUI(menuGUI m1, boolean[][] sotto, Connessione c1){
+    public impostazioniPartitaGUI(menuGUI m1, Connessione c1){
 
         setContentPane(settings);
         setTitle("menu");
@@ -28,13 +32,22 @@ public class impostazioniPartitaGUI extends JFrame{
         setVisible(true);
         this.m1 = m1;
         this.sotto = sotto;
-        listNicknames = new JList();
-        DefaultListModel model = new DefaultListModel();
+        c1.connetti();
+        ArrayList<String> listaNicknames= c1.cercaNickname();
+        c1.disconnetti();
+        DefaultListModel<String> model = new DefaultListModel<>();
+        for(int i = 0; i<listaNicknames.size(); i++){
+            String value = listaNicknames.get(i);
+            model.addElement(value);
+        }
+        listNicknames=new JList<>(model);
+        listNicknames.setVisible(true);
+        listNicknames.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        pnlLista.setLayout(new GridLayout(1,1));
+        pnlLista.add(listNicknames);
+        pnlLista.setVisible(true);
 
-        model.addElement("Grande");
-        model.addElement("piccolo");
 
-        listNicknames.setModel(model);
 
 
 
@@ -47,12 +60,28 @@ public class impostazioniPartitaGUI extends JFrame{
             }
         });
         btnAvanti.addActionListener(new ActionListener() {
-            String nickname;
             public void actionPerformed(ActionEvent e) {
-                //nickname = listNicknames.getSelectedValue();
-                partitaGUI p1 = new partitaGUI(m1, sotto, nickname);
+                if(listNicknames.isSelectionEmpty()){
+                    lblInfo.setText("NON HAI SELEZIONATO NESSUN NICKNAME, riprova");
+                }else{
+                    nickname = (String) listNicknames.getSelectedValue();
+                    Random rand = new Random();
+                    boolean sotto[][]=new boolean[4][4];
+                    for(int i = 0; i< 4; i++){
+                        int j = rand.nextInt(4);
+                        int v = rand.nextInt(4);
+                        sotto[j][v] = true;
+                    }
+                    partitaGUI p1 = new partitaGUI(m1, sotto, getNickname());
+                }
+                setVisible(false);
             }
         });
 
     }
+    public String getNickname(){
+        this.nickname = nickname;
+        return nickname;
+    }
+
 }

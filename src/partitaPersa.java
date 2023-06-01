@@ -9,14 +9,17 @@ public class partitaPersa extends JFrame{
     private JButton btnBackMenu;
     private JPanel gameOver;
     private int punteggio;
+    private String nickname;
 
-    public partitaPersa(menuGUI m1,  int punteggio) {
+    public partitaPersa(menuGUI m1,  int punteggio, String nickname) {
+        this.nickname = nickname;
+        Connessione c1 = new Connessione();
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setContentPane(gameOver);
         setTitle("menu");
         setSize(600, 400);
         Dimension dim = getToolkit().getScreenSize();
         setLocation(dim.width / 2 - this.getWidth() / 2, dim.height / 2 - this.getHeight() / 2);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         this.punteggio=punteggio;
         lblPunteggio.setText("PUNTEGGIO: "+punteggio);
@@ -27,6 +30,11 @@ public class partitaPersa extends JFrame{
                 m1.setVisible(true);
             }
         });
+        c1.connetti();
+        c1.inserisciPunteggio(nickname, punteggio);
+        c1.disconnetti();
+
     }
+
 
 }

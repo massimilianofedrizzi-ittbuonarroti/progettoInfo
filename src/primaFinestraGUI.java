@@ -7,7 +7,7 @@ public class primaFinestraGUI extends JFrame{
     private JPanel primaFinestra;
     private JButton AVANTIButton;
 
-    public primaFinestraGUI(boolean[][] sotto, Connessione c1){
+    public primaFinestraGUI(Connessione c1){
         try {//interfaccia di sistema
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
@@ -24,7 +24,7 @@ public class primaFinestraGUI extends JFrame{
         AVANTIButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                menuGUI m1 = new menuGUI(sotto, c1);
+                menuGUI m1 = new menuGUI(c1);
                 setVisible(false);
             }
         });

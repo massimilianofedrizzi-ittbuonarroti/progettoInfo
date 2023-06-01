@@ -10,7 +10,7 @@ public class menuGUI extends JFrame{
     private JButton visualizzareClassificaButton;
     private JPanel menu;
     boolean[][] sotto;
-    public menuGUI(boolean[][] sotto, Connessione c1){
+    public menuGUI(Connessione c1){
         setContentPane(menu);
         setTitle("menu");
         setSize(600, 400);
@@ -30,8 +30,7 @@ public class menuGUI extends JFrame{
         iniziarePartitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                impostazioniPartitaGUI imp1 = new impostazioniPartitaGUI(menu, sotto, c1);
-                menu.setVisible(false);
+                impostazioniPartitaGUI imp1 = new impostazioniPartitaGUI(menu, c1);
             }
         });
         visualizzareClassificaButton.addActionListener(new ActionListener() {
