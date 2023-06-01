@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 01, 2023 alle 08:07
+-- Creato il: Giu 01, 2023 alle 09:53
 -- Versione del server: 10.4.19-MariaDB
 -- Versione PHP: 8.0.7
 
@@ -33,6 +33,16 @@ CREATE TABLE `punteggi` (
   `nickname` varchar(100) NOT NULL,
   `punteggio` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `punteggi`
+--
+
+INSERT INTO `punteggi` (`nickname`, `punteggio`) VALUES
+('leonarda', 5),
+('massi', 4),
+('sdbs', 5),
+('Torrisi', 5);
 
 --
 -- Indici per le tabelle scaricate
