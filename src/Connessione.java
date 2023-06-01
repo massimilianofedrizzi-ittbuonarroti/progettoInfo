@@ -15,7 +15,7 @@ public class Connessione {
 
     public void connetti() {
         try {
-            String jdbcURL = "jdbc:mysql://localhost:3306/prato_fiorito";
+            String jdbcURL = "jdbc:mysql://localhost:3306/pratofiorito";
             String username = "root";
             String password = "";
             connessione = DriverManager.getConnection(jdbcURL, username, password);
